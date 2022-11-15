@@ -30,23 +30,14 @@ namespace WebApi2.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime?>("Completed")
-                        .HasColumnType("datetime2");
-
                     b.Property<DateTime>("Created")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Description")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("IssueType")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Priorty")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Title")
+                    b.Property<string>("score")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
